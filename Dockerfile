@@ -15,11 +15,6 @@ RUN apt-get update && \
 	pip install numpy msgpack-python ujson && \
 	rm -rf /root/.pip/cache/* /tmp/pip*
 
-# virtualenv not needed for docker
-#RUN echo 'export WORKON_HOME=$HOME/.virtualenvs' >> /etc/bash.bashrc
-#RUN echo 'source /usr/local/bin/virtualenvwrapper.sh' >> /etc/bash.bashrc
-#RUN source /etc/bash.bashrc
-
 ADD opencv-3.1.0.tar.xz /root
 RUN mkdir -p /root/opencv/build && cd /root/opencv/build && \
 	cmake -D CMAKE_BUILD_TYPE=RELEASE \
