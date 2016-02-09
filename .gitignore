@@ -1,0 +1,5 @@
+opencv-*.tar.xz
+docker-build.log
+opencv
+opencv_contrib
+opencv*.xz
